@@ -1,1 +1,26 @@
+void setup(){
+  size (500, 500);
+  frameRate(14);
+  test = new snake();
+  food1 = new food();
+  rectMode (CENTER);
+  textAlign(CENTER, CENTER);
+  
+class food{
+  float xpos, ypos;
+  
+  food(){
+    xpos = random(100, width - 100);
+    ypos = random(100, height - 100);
+  }
+  void display(){
+   
+   fill(190,0,100);
+   ellipse(xpos, ypos,5,5);
+ }
+  void reset(){
+    xpos = random(100, width - 100);
+    ypos = random(100, height - 100);
+ }   
+}
 
